@@ -1,0 +1,129 @@
+---
+layout: post
+title:  "嘘つきの世界 (Usotsuki no Seikai) by Sukoppu"
+date:   2013-11-22 21:57:00
+categories:
+author: o0Angeles0o
+---
+
+<b>嘘つきの世界</b>
+<i>(Usotsuki no Seikai)</i>
+
+<b>Liars' World</b>
+
+* Lyrics, Composition, Music: sukoppu
+* Vocal: Hatsune Miku
+
+Japanese:
+
+昔聞いた話　眠りにつく少女を
+喜ばせた歌は　あれもこれも嘘だったんだ
+
+汚いことは隠し　綺麗ごとを並べて
+そんな夜みたいな　言葉ばかり広まってって
+君と僕はね　似た者同士なのに
+分かり合えないのはなんで？　なんで？
+
+僕たちが作った嘘つきの世界で　君は作り笑いして
+本当のことも知らずに僕は　つまんない冗談で君を傷つけてくよ
+
+悪魔は嘘つきで　天使は正直者
+人は嘘も本当も言うよ　一番面倒なんだ
+
+知らなくていいことを知りすぎて
+知らなきゃ良かったよなんて　なんて
+
+傷つけ傷つかないようにと　僕たちは嘘をついて隠し
+そうしてく度また傷ついて　なんて人は脆く間抜けなんでしょう
+
+君の目に映る僕は誰なの？
+
+君は誰にも優しくするから　辛くたって笑ってみせるけど
+隠したって分かるよ裏では　君は泣いて　泣いて　泣いて
+
+その涙の理由を話してよ　僕の前では強がらないでよ
+嘘つきだらけのこの世界で　僕は君を信じそして
+つまんないこんな世界　壊したいんだ
+
+Romaji:
+
+Mukashi kiita hanashi nemurini tsuku shoujo wo
+Yorokoba seta uta wa are mo kore mo usodattanda
+
+Kitanai koto wa kakushi kirei goto wo narabete
+Sonna yoru mitai na kotoba bakari hiromattette
+Kimi to boku wa ne nitamonodoushi nanoni
+Wakari aenai no wa nande? Nande?
+
+Bokutachi ga tsukutta usotsuki no sekai de kimi wa tsukuri warai shite
+Hontou no koto mo shirazu ni boku wa tsumannai joudan de kimi wo kizutsukete ku yo
+
+Akuma wa usotsuki de tenshi wa shoujikimono
+Hito wa uso mo hontou mo iu yo ichiban mendou nanda
+
+Shiranakute ii koto wo shiri sugite
+Shiranakya yokatta yo nante nante
+
+Kizutsuke kizutsukanai you ni to bokutachi wa uso wo tsuite kakushi
+Soushite ku tabi mata kizutsuite nante hito wa moroku manuke nan deshou
+
+Kimi no me ni utsuru boku wa dare nano?
+
+Kimi wa darenimo yasashiku surukara tsurakutatte waratte miseru kedo
+Kakushitatte wakaru yo urade wa kimi wa naite naite naite
+
+Sono namida no riyuu wo hanashite yo boku no mae de wa tsuyogaranaide yo
+Usotsuki darake no kono sekai de boku wa kimi wo shinji soshite
+Tsumannai konna sekai kowashitainda
+
+Translation:
+
+Once upon a time, I heard a story of a sleeping girl,
+The song which brought her joy was filled with lies here and there.
+
+We hide our dirty qualities, and show off the pretty ones.
+The only words we spread are the ones that are as dark as the night.
+You and I are both similar, but why can't we come to an understanding? Why?
+
+In this world of lies that we have created, you are forced to keep a fake smile.
+But I know the truth, that the dull jokes are actually hurting you.
+
+Demons are always the liars, while the angels are the truth tellers.
+But humans tell both lies and truths, thus we are the most troublesome.
+
+We know too much of the things that we shouldn't have known,
+we would have been much better off without knowing those things. But why? Why?
+
+In order to prevent hurting others and from getting hurt, we use lies to cover up the truth.
+But our untruthfulness only wind up hurting us more.
+Why are humans such fragile fools?
+
+Who am I reflected in your eyes?
+
+Since you're always so nice to everyone, you smile even though you are pained.
+Even though you try to hide it, I know that in the other side of you, you are crying, crying, crying.
+Those tears only tell the truth, that you are not strong enough.
+
+Even in this world filled with liars, I will surely believe in you.
+And then, I want to destroy this utterly dull world.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The world filled with hypocrites and utter contradictions...
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+
+[jekyll]:      http://jekyllrb.com
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-help]: https://github.com/jekyll/jekyll-help

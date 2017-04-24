@@ -1,0 +1,16 @@
+# Site Settings
+title: The Ethereal Past
+email: s.k.xu@berkeley.edu
+description: >
+  A personal website by Kate Shijie Xu
+baseurl: ""
+url: "http://localhost:4000"
+footer-links:
+  github:  Starshine3
+# Build Settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+theme: minima
+kramdown:
+  input: GFM
