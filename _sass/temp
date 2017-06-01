@@ -1,0 +1,477 @@
+/** Basic styles. */
+body {
+    font-size: 100%;
+    font-family: "Ubuntu", sans-serif;
+    color: #3e3947;
+    background-color: white;
+}
+body,
+html {
+    height: 100%;
+}
+a {
+    color: #3e3947;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/** Vertical dot navigation styles. */
+.vNav {
+    position: fixed;
+    top: 35%;
+    left: 88%;
+    width: 50px;
+    z-index: 9999;
+    list-style-type: none;
+}
+.vNav ul {
+    position: relative;
+    padding-left: 35%;
+}
+.vNav ul li {
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 35%;
+}
+.vNav a {
+    display: block;
+    width: 8px;
+    height: 8px;
+    text-indent: -9999px;
+    border-radius: 50%;
+    border: 4px solid;
+    border-color: #0045e8;
+    text-decoration: none;
+}
+.vNav a:hover {
+    border-radius: 50%;
+    background-color: white;
+    text-decoration: none;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+}
+.vNav a:hover .label {
+    opacity: 1;
+}
+.vNav a.active {
+    border-radius: 50%;
+    background-color: #0045e8;
+    text-decoration: none;
+}
+.label {
+    position: relative;
+    top: -35%;
+    left: -250%;
+    width: 100%;
+    text-align: right;
+    font-size: .6em;
+    font-weight: 800;
+    color: #0045e8;
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+/* All section style. */
+.section {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+/* Intro section styles. */
+#intro {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+.container {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 60px;
+    top: 10%;
+    margin-left: 6%;
+    margin-right: 8%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    padding: 6%;
+    border-radius: 40px;
+    border: 10px solid #EA9999;
+    box-shadow: 0px 10px #FFE29C, 0px 22px #9DC4FF;
+}
+.title {
+    margin-top: 5%;
+    margin-bottom: 13%;
+}
+.container.buttons {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+.section-shortcut {
+    display: inline-block;
+    border-radius: 10px;
+    width: 120px;
+    padding: 1.5% 3.3% 1.5% 3%;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(146, 196, 125, 0.81);
+}
+#intro .section-shortcut:hover {
+    color: #f2d388;
+}
+#intro .scroll-down {
+    position: absolute;
+    bottom: 8%;
+    width: 38px;
+    height: 44px;
+    left: 47%;
+    background: url("../img/downArrow.svg");
+}
+#moon {
+    top: -2%;
+    left: 10%;
+    position: absolute;
+}
+.stars {
+    animation-delay: 3.6s;
+    animation: ease-in-out forwards;
+    -webkit-animation-delay: 3.6s;
+    -webkit-animation: ease-in-out forwards;
+}
+.stars:hover {
+    animation: spin 1.8s linear;
+    -webkit-animation: spin 1.8s linear;
+}
+#star {
+    width: 5%;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+#starZero {
+    width: 7%;
+    position: absolute;
+    bottom: 25%;
+    right: 20%
+}
+#starOne {
+    position: absolute;
+    top: 39%;
+    width: 5%;
+    left: 55%;
+    -webkit-transform: rotate(27deg);
+    transform: rotate(27deg);
+    -moz-transform: rotate(27deg);
+}
+#starTwo {
+    position: absolute;
+    left: 2%;
+    top: 45%;
+    width: 2%;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+#starThree {
+    position: absolute;
+    top: 25%;
+    right: 2%;
+    width: 4%;
+    -webkit-transform: rotate(-24deg);
+    -moz-transform: rotate(-24deg);
+    transform: rotate(-24deg);
+}
+#starFour {
+    position: absolute;
+    width: 2%;
+    top: 5%;
+    right: 45%;
+}
+#starFive {
+    position: absolute;
+    width: 4%;
+    bottom: 15%;
+    left: 33%;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+@keyframes expand {
+    50% {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+    }
+}
+@-webkit-keyframes expand {
+    50% {
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+    }
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+    }
+}
+
+/* About me section styles. */
+#about-me {
+    background-color: #EA9999;
+    z-index: 5;
+}
+#leftSide {
+    background-color: #DF6664;
+    width: 50%;
+    opacity: 0.8;
+    z-index: 6;
+    min-height: 100%;
+}
+#me {
+    top: 5%;
+    width: 100%;
+    position: absolute;
+}
+#starSix {
+    position: absolute;
+    width: 3.5%;
+    top: 28.5%;
+    right: 60%;
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+#starSeven {
+    position: absolute;
+    width: 4%;
+    top: 15%;
+    left: 7%;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+#starEight {
+    position: absolute;
+    width: 7%;
+    top: 30%;
+    right: 10%;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+#moonOne {
+    position: absolute;
+    width: 6%;
+    top: 11%;
+    right: 37%;
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
+#moonTwo {
+    position: absolute;
+    width: 4%;
+    bottom: 37%;
+    left: 11%;
+    -webkit-transform: rotate(100deg);
+    transform: rotate(100deg);
+    -moz-transform: rotate(100deg);
+}
+.shadow {
+    width: 12%;
+    position: absolute;
+}
+#shadowOne {
+    top: 6%;
+    left: 41%;
+    z-index: 8;
+}
+#myPic {
+    top: 6%;
+    left: 41%;
+    opacity: 0;
+    z-index: 10;
+}
+#shadowTwo {
+    opacity: 0.5;
+    top: 5%;
+    left: 43%;
+}
+
+/* Project section styles. */
+#projects {
+    background-color: #DF6664;
+}
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    height: 500px;
+    overflow: hidden;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+    background-color: #9DC4FF;
+    border-radius: 40px;
+    border: 10px solid white;
+}
+.carousel-item {
+    position: relative;
+    display: inline-block;
+}
+.project-picture {
+    position: relative;
+    width: 25%;
+    margin: 10% 5% 8% 5%;
+    float: left;
+}
+.project-content {
+    position: relative;
+    float: right;
+    width: 55%;
+    height: 350px;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    margin-right: 5%;
+}
+.project-name {
+    width: 70%;
+    padding: 10px;
+    right: 20%;
+    font-size: 24px;
+    background-color: #006eec;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    border: 5px solid white;
+}
+.project-desc-box {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    height: 80%;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 5px solid white;
+    position: relative;
+    background-color: rgba(146, 196, 125, 0.81);
+}
+.project-desc {
+    margin-top: 12%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#carousel-prev {
+    position: absolute;
+    width: 6%;
+    height: 10%;
+    right: 16%;
+    top: 77%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    background: none;
+}
+#carousel-next {
+    position: absolute;
+    width: 6%;
+    height: 10%;
+    right: 5%;
+    top: 77%;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    background: none;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* Translation section. */
+.translation-container {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 60px;
+    top: 10%;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+#translationsBubble {
+    width: 100%;
+}
+.tButtons {
+    margin-left: 10%;
+    width: 40%;
+    position: absolute;
+    bottom: 16%;
+}
+.tButtons .section-shortcut {
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    padding: 4%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(146, 196, 125, 0.81);
+}
+#vocaloid {
+    left: 35%;
+}
+#translation .section-shortcut:hover {
+    color: #f2d388;
+}
+
+<div class="transition" >
+    <img src="../img/dark_cloud_dark.svg" class="cloud" id ="ddCloud1"/>
+    <img src="../img/dark_cloud_dark.svg" class="cloud" id ="ddCloud2"/>
+    <img src="../img/dark_cloud_light.svg" class="cloud" id ="dlCloud1"/>
+    <img src="../img/dark_cloud_light.svg" class="cloud" id ="dlCloud1"/>
+    <img src="../img/light_cloud_light.svg" class="cloud" id ="llCloud1"/>
+    <img src="../img/light_cloud_light.svg" class="cloud" id ="llCloud2"/>
+    <img src="../img/light_cloud_dark.svg" class="cloud" id ="ldCloud1"/>
+    <img src="../img/light_cloud_dark.svg" class="cloud" id ="ldCloud2"/>
+</div>

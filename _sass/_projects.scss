@@ -1,0 +1,65 @@
+.container-fluid.chart.row{
+    margin-top: 5%;
+}
+
+/* clear fix */
+.chart:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.chart-item {
+  height: 10%;
+  position: relative;
+  border-style: solid;
+  border-width: medium;
+}
+.chart-item img {
+  width: 100%;
+  display: block;
+}
+.chart-item:hover .chart-item-overlay{
+    height: 100%;
+/*    cursor: pointer;*/
+}
+.chart-item-overlay {
+    height: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(200, 54, 54, 0.8);
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+.chart-item-text {
+    top: 40%;
+    left: 50%;
+    width: 80%;
+    position: absolute;
+    color: #ffcc66;
+    overflow: hidden;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.chart-item-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.chart-item-hook {
+    font-size: 19px;
+    margin-top: 5%;
+}
+.small {
+  width: 20%;
+}
+.medium {
+  width: 40%;
+}
+.large {
+  width: 60%;
+}
+.xlarge {
+  width: 80%;
+}

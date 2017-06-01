@@ -1,4 +1,19 @@
 <footer>
-	<p>Kate Shijie Xu 2017</p>
+
+	<div>Kate Shijie Xu 2017</div>
+
+    <div id="social-media">
+        {% if site.footer-links.github %}
+        <a href="https://github.com/{{ site.footer-links.github }}">
+          <img class="social-media" src="../img/github_icon.svg">
+        </a>
+        {% endif %}
+
+        <a href="https://www.linkedin.com/in/kate-shijie-xu-666b57110/">
+          <img class="social-media" src="../img/linkedin_icon.svg">
+        </a>
+    </div>
+
+
 </footer>
 

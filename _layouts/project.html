@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+<script src="../js/chart.js"></script>
+ -->
+<div class="container-fluid chart row">
+  <div class="grid-sizer"></div>
+  {% for proj in site.data.csProjects %}
+    {% if proj.Show == 'true' %}
+        <div class="chart-item {{proj.ImgSize}}">
+          <img src="{{proj.Img}}">
+          <div class="chart-item-overlay">
+            <div class="chart-item-text">
+                <div class="chart-item-title">{{proj.Name}}</div>
+                <div class="chart-item-hook">{{proj.Hook}}</div>
+            </div>
+          </div>
+        </div>
+    {% endif %}
+ {% endfor %}
+</div>

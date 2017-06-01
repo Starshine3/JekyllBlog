@@ -1,0 +1,34 @@
+# name
+# language/library
+# img/demo?
+# description
+# comments
+# hook: 1/2 sentences
+# purpose: school? competition? personal entertainment?
+
+
+- name: The Enigma
+  language: Java
+  description: A Java program which simulates the Enigma machine used by the Germans in WWII. It creates a machine from a given configuration file, then encrypts a given input message.
+  img: ../img/projects/enigma.jpg
+  purpose: CS 61B
+
+
+- name: Air Pollution Globe
+  language: Python, HTML/CSS, Javascript (Three.JS, WebGL)
+  description: A globe that visualizes the concentration of air pollutants in urban areas across the world. Data obtained from WHO’s May 2016 database.
+  img: ../img/projects/airPollutionGlobe.png
+
+- name: Ataxx
+  language: Java
+  description: A 2-player checker-like Java game that can be played manually or automatically.
+  img: ../img/projects/ataxx.png
+
+- name: Cube Puzzle
+  language: Java
+  description: A Java game in which you try to color all faces of a cube, given a white cube on a 4x4 puzzle with 6 tiles colored. As the cube rolls across the tiles, its face swaps color with the tile that it touches.
+  img: ../img/projects/cubePuzzle.png
+
+- name: Cube Puzzle
+  language: Java
+  description: A Java game in which you try to color all faces of a cube, given a white cube on a 4x4 puzzle with 6 tiles colored. As the cube rolls across the tiles, its face swaps color with the tile that it touches.
