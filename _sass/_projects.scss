@@ -1,5 +1,6 @@
-.container-fluid.chart.row{
-    margin-top: 5%;
+.chart {
+    width: 70%;
+    padding: 2%;
 }
 
 /* clear fix */
@@ -9,14 +10,21 @@
   clear: both;
 }
 .chart-item {
-  height: 10%;
-  position: relative;
+  display: block;
   border-style: solid;
   border-width: medium;
 }
+.chart-item.small {
+  width: 300px;
+}
+.chart-item.medium {
+  width: 600px;
+}
+.chart-item.large {
+  width: 800px;
+}
 .chart-item img {
   width: 100%;
-  display: block;
 }
 .chart-item:hover .chart-item-overlay{
     height: 100%;
@@ -50,16 +58,4 @@
 .chart-item-hook {
     font-size: 19px;
     margin-top: 5%;
-}
-.small {
-  width: 20%;
-}
-.medium {
-  width: 40%;
-}
-.large {
-  width: 60%;
-}
-.xlarge {
-  width: 80%;
 }

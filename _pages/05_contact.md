@@ -2,7 +2,7 @@
 title: Contact
 layout: post
 permalink: /contact/
-show: true
+show: false
 ---
 
 

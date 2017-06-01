@@ -1,13 +1,11 @@
 ---
 layout: default
 ---
-<!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <script src="../js/chart.js"></script>
- -->
-<div class="container-fluid chart row">
-  <div class="grid-sizer"></div>
+
+<div class="container-fluid"><div class="chart">
   {% for proj in site.data.csProjects %}
     {% if proj.Show == 'true' %}
         <div class="chart-item {{proj.ImgSize}}">
@@ -21,4 +19,4 @@ layout: default
         </div>
     {% endif %}
  {% endfor %}
-</div>
+</div></div>
