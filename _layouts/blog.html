@@ -3,16 +3,14 @@ layout: default
 ---
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
-<div id="container">
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 160 }'>
-      {% for post in site.posts %}
-      <div class="grid-item" style="background-color:#{{post.color}}">
-          <a href="{{post.url | prepend: site.baseurl}}">
-            <h4>{{post.title}}</h4>
-          </a>
-          <div class="action">{{ post.date | date: '%B %d, %Y' }}</div>
-      </div>
-     {% endfor %}
-
-  </div>
-</div>
+<script src="../js/chart.js"></script>
+<div class="container-fluid"><div class="chart">
+  {% for post in site.posts %}
+    <div class="chart-item">
+      <a href="{{post.url | prepend: site.baseurl}}">
+        <h4>{{post.title}}</h4>
+      </a>
+      <div class="action">{{ post.date | date: '%B %d, %Y' }}</div>
+    </div>
+ {% endfor %}
+</div></div>

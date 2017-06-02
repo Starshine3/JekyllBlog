@@ -1,0 +1,32 @@
+---
+layout: post
+type: translations
+genre: anime | rock
+
+date: '2016-12-18T16:22:00.000-08:00'
+
+titles:
+    eTitle: Required
+    jTitle: Optional
+    rTitle: Optional
+misc: Optional
+artist: Required
+vocal: Optional
+songWriter: Optional
+---
+<div class="left col-sm-6">
+    <div id="panel-selection">
+        <button type="button" class="select" id="select-jp" onclick="flip();">Japanese</button><button type="button" class="select" id="select-romaji" onclick="flip();" disabled>Romaji</button>
+    </div>
+    <div class="left-lyrics">
+        <div class="lyrics" id="jpLyrics">
+        </div>
+        <div class="lyrics" id="romajiLyrics">
+        </div>
+    </div>
+</div>
+<div class="right col-sm-6">
+    <div id="panel-selection">English</div>
+    <div class="lyrics" id="engLyrics">
+    </div>
+</div>

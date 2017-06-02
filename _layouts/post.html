@@ -1,15 +1,30 @@
 ---
 layout: default
 ---
-
+<script src="{{site.baseurl}}/js/translations.js"></script>
 <article class="post">
+  <div class="intro-entry container-fluid">
+    {% if page.img %}
+      <img src= '{{page.img}}' class="img-responsive">
+    {% endif %}
+      <h5>{{ page.date | date: "%b %-d, %Y" }}</h5>
+      <h3>{{ page.titles.eTitle }}</h3>
+    {% if page.titles.jTitle and page.titles.rTitle %}
+      <h4>{{ page.titles.jTitle }} | {{ page.titles.rTitle }}</h4>
+    {% endif %}
+    {% if page.vocal and page.songWriter %}
+      <h5>Vocal: {{ page.vocal }} | Songwriter: {{ page.songWriter }}</h5>
+    {% else if page.songWriter %}
+      <h5>Songwriter: {{ page.songWriter }}</h5>
+    {% else if page.vocal %}
+      <h5>Vocal: {{ page.vocal }}</h5>
+    {% endif %}
 
-  <h2>{{ page.title }}</h2>
-
-  <time>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</time>
-
-  <div class="entry">
+    {% if page.misc %}
+      <h4>{{ page.misc }}</h4>
+    {% endif %}
+  </div>
+  <div class="entry container-fluid">
     {{ content }}
   </div>
-
 </article>

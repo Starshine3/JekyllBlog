@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="container-fluid"><div id="translationChart">
+  {% for post in site.posts %}
+    {% if post.type == 'translations' %}
+        <div class="tchart-item col-sm-2">
+          <h6>{{ post.date | date: '%b %d, %Y' }}</h6>
+          <a href="{{post.url | prepend: site.baseurl}}">
+            {% if post.titles.rTitle %}
+                <h4>{{post.titles.rTitle}}</h4>
+            {% else %}
+                <h4>{{post.titles.eTitle}}</h4>
+            {% endif %}
+            <h5>{{ post.artist }}</h5>
+          </a>
+        </div>
+    {% endif %}
+ {% endfor %}
+</div></div>
