@@ -4,7 +4,7 @@ $(document).ready(function() {
     /* Vertical dot navigation prep*/
     var sectionPosition = [];
     $('section').each(function() {
-        sectionPosition.push($(this).offset().top);
+        sectionPosition.push($(this).offset().top-50);
     });
 
     $('a').click(function() {

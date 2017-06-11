@@ -1,7 +1,7 @@
 ---
 title: Contact
 layout: post
-permalink: /contact/
+permalink: /contact
 show: false
 ---
 

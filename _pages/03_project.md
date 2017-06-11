@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Project
-permalink: /project/
+permalink: /project
 show: true
 ---
 ELLO WORLLLLDDDDD

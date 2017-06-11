@@ -52,8 +52,10 @@
     -moz-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
 }
-
 #translationChart {
     margin: 2%;
     text-align: center;
+}
+.tchart-item {
+    height: 125px;
 }

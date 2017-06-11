@@ -1,6 +1,6 @@
 /** Basic styles. */
 body {
-    padding-top: 50px;
+    height: 100%;
     font-size: 100%;
     font-family: "Ubuntu", sans-serif;
     color: #3e3947;
@@ -94,9 +94,6 @@ section {
 
 /* Intro section styles. */
 #intro {
-    display: inline-block;
-    margin: 0 auto;
-    width: 100%;
     text-align: center;
     background-color: #5a597f;
 }
