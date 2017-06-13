@@ -1,0 +1,56 @@
+<!DOCTYPE html lang="en"><html>
+
+ <head>
+  <title>HTML Text Editor</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+ </head>
+
+ <body>
+   <div class="container-fluid" id='content'>
+    <div class="left col-sm-6 part">
+      <div id="panel-selection">
+          <button type="button" class="select" id="select-text" onclick="flip();">Text</button>
+          <button type="button" class="select" id="select-html" onclick="flip();">HTML</button>
+      </div>
+      <div id="before">
+        <div id="controls">
+          <button type="button" id="bold" class="control">B</button>
+          <button type="button" id="italic" class="control">I</button>
+          <button type="button" id="link" class="control">Link</button>
+          <button type="button" id="cap" class="control">Cap</button>
+
+          <select id="fonts">
+           <option value="Normal">Normal</option>
+           <option value="Arial">Arial</option>
+           <option value="Comic Sans MS">Comic Sans MS</option>
+           <option value="Times">Times</option>
+           <option value="Ubuntu">Ubuntu</option>
+          </select>
+        </div>
+        <div class="display">
+          <iframe id="textCode"></iframe>
+          <textarea name="text" id='htmlCode' rows='10' cols='50'></textarea>
+        </div>
+        <!-- <button type="button" id="cap">Cap</button> -->
+
+      </div>
+    </div>
+    <div class="right col-sm-6 part">
+      <h1>Resulted Text</h1>
+      <textarea name="text" id='editedText' class="display" rows='10' cols='50'></textarea>
+    </div>
+   </div>
+
+
+ </body>
+
+</html>
