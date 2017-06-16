@@ -69,29 +69,6 @@ function ItalicIt(){
   codeWindow.focus();
 }
 
-function capIt() {
-  var codeWindow = document.getElementById("textCode").contentWindow;
-  var codeHTML = codeWindow.document.body.innerHTML;
-  var codeText = codeWindow.document.body.innerText;
-
-  console.log(codeHTML);
-  console.log(codeText);
-  console.log(titleCase(codeText));
-  document.getElementById("editedText").innerText = titleCase(codeText);
-
-}
-function titleCase(str) {
-    console.log('inside titlecase', str);
-    return str
-        .toLowerCase()
-        .split('\n')
-        .map(function(word) {
-            return word[0].toUpperCase() + word.substr(1);
-        })
-        .join('\n');
-}
-
-
 function changeFont(font){
   var codeWindow = document.getElementById("textCode").contentWindow;
   codeWindow.focus();
@@ -105,6 +82,84 @@ function url(url){
   codeWindow.document.execCommand("Createlink", false, url);
   codeWindow.focus();
 }
+
+function capIt() {
+  var codeWindow = document.getElementById("textCode").contentWindow;
+  var codeHTML = codeWindow.document.body.innerHTML;
+  var codeText = codeWindow.document.body.innerText;
+  document.getElementById("editedText").innerText = processText(codeText);
+
+}
+var temp;
+function processText(str) {
+    var lines = str.split('\n');
+    var output = [];
+    for (var i = 0; i < lines.length; i++) {
+      if (lines[i] != '') {
+        temp = replaceCommon(lines[i]);
+        temp = capFirstLetter(temp);
+        output.push(temp);
+      } else {
+        output.push(lines[i]);
+      }
+    }
+    return output.join('\n');
+}
+
+function capFirstLetter(line) {
+  var outputLine = '';
+  while ((line[0].match(/^[a-zA-Z]*$/) == null) && line.length > 1) {
+    outputLine += line[0];
+    line = line.substring(1);
+  }
+  outputLine += line[0].toUpperCase();
+  outputLine += line.substring(1);
+  return outputLine;
+}
+
+var check, pre, suff;
+var b4Change = ['o', 'ha', 'e', 'ichi nin'];
+var afterChange = ['wo', 'wa', 'he', 'hitori'];
+var need2Merge = ['tte', 'ta', 'da', 'i', 'te', 'de', 'nai', 'zu', 'n', 'u', 'tara'];
+// ha -> wa
+// o -> wo
+// nai, ite
+function replaceCommon(line) {
+  var words = line.match(/\S+/g);
+  var index = -2;
+  for (var i = 0; i < words.length; i++) {
+    check = words[i];
+    pre = '';
+    suff = '';
+    if (words[i].length > 2) {
+      if ((words[i][0].match(/[^a-zA-Z]/) != null) &&
+          (words[i][words[i].length - 1].match(/[^a-zA-Z]/) != null)) {
+        check = words[i].substring(1, words[i].length - 1);
+        pre = words[i][0];
+        suff = words[i][words[i].length - 1];
+      }
+    } if (words[i].length > 1) {
+      if ((words[i][0].match(/[^a-zA-Z]/) != null)) {
+        check = words[i].substring(1, words[i].length);
+        pre = words[i][0];
+      } if ((words[i][words[i].length - 1].match(/[^a-zA-Z]/) != null)) {
+        check = words[i].substring(0, words[i].length - 1);
+        suff = words[i][words[i].length - 1];
+      }
+    }
+    index = b4Change.indexOf(check);
+    if (index > -1) {
+      words[i] = pre + afterChange[index] + suff;
+    }
+    index = need2Merge.indexOf(check);
+    if (index > 0) {
+      words[i - 1] += words[i];
+      words.splice(i, 1);
+    }
+  }
+  return words.join(' ');
+}
+
 
 // function flip() {
 //   $('.panel-selection').toggleClass('flipped');
