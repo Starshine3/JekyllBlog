@@ -4,7 +4,7 @@ layout: translations
 permalink: /translations
 show: true
 ---
-Disclaimer: I'm an amateur translator and Japanese learner. I translate in order to discover the meanings behind some of my favorite songs.
+I'm an amateur translator and Japanese learner. I translate in order to discover the meanings behind some of my favorite songs.
 
 * Please understand that I do make mistakes in my translations
 

@@ -1,6 +1,15 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+{% include head.html %}
 {% include home.html %}
 {% include home/homeJS.html %}
+<body>
+    {% include navBar.html %}
+    {{content}}
+</body>
+
+{% include footer.html %}
+</html>
+
+
 
