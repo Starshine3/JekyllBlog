@@ -78,12 +78,22 @@ ParallaxPart = (function() {
     this.el = el;
     this.speed = parseFloat(this.el.getAttribute('data-parallax-speed'));
     this.maxScroll = parseInt(this.el.getAttribute('data-max-scroll'));
+    this.direction = this.el.getAttribute('data-direction');
   }
 
   ParallaxPart.prototype.update = function(scrollY) {
     if (scrollY > this.maxScroll) { return; }
     var offset = -(scrollY * this.speed);
-    this.setYTransform(offset);
+    if (this.direction == "y") {this.setYTransform(offset);}
+    else if (this.direction == "x") {this.setXTransform(-offset);}
+  };
+
+  ParallaxPart.prototype.setXTransform = function(val) {
+    this.el.style.webkitTransform = "translate3d(" + val + "px, 0, 0)";
+    this.el.style.MozTransform    = "translate3d(" + val + "px, 0, 0)";
+    this.el.style.OTransform      = "translate3d(" + val + "px, 0, 0)";
+    this.el.style.transform       = "translate3d(" + val + "px, 0, 0)";
+    this.el.style.msTransform     = "translateX(" + val + "px)";
   };
 
   ParallaxPart.prototype.setYTransform = function(val) {

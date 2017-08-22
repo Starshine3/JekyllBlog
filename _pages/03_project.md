@@ -4,4 +4,4 @@ title: Project
 permalink: /project
 show: true
 ---
-ELLO WORLLLLDDDDD
+Here are the some of the projects that I've worked on.
