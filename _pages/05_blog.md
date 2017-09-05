@@ -2,5 +2,5 @@
 title: Blog
 layout: blog
 permalink: /blog
-show: true
+show: false
 ---

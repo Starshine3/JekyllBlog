@@ -3,7 +3,14 @@ layout: default
 ---
 
 <script src="../js/chart.js"></script>
-<div class="container-fluid main"><div class="chart">
+<div class="container-fluid summary">
+  <div class="summary-content">
+      <h3>Blog</h3>
+      <br>
+      Randomness.
+  </div>
+</div>
+<div class="container-fluid"><div class="chart">
   {% for post in site.posts %}
     <div class="chart-item">
       <a href="{{post.url | prepend: site.baseurl}}">

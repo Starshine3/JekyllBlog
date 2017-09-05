@@ -67,7 +67,11 @@ $(document).ready(function() {
         $('#shadowOne').css('opacity', '1');
         $('#myPic').css('opacity', '0');
     });
-
+    $('g.proj').click(function() {
+        $('g.proj').removeClass('active');
+        $(this).addClass('active');
+        console.log(this);
+    });
 });
 
 //Parallax Scroll
@@ -124,7 +128,7 @@ ParallaxManager = (function() {
       }
       this.elements = Array.prototype.slice.call(this.elements);
     } else {
-      throw new Error("Parallax: Element variable is not a querySelector string, Array, or NodeList");
+      throw new Error("Failed");
     }
     for (var i in this.elements) {
       this.parts.push(new ParallaxPart(this.elements[i]));

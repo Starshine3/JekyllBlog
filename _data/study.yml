@@ -1,0 +1,64 @@
+# name
+# purpose
+# link
+# example
+# pseudocode
+# type
+# complexity
+# difficulty
+
+- name: Kadane's Algorithm
+  purpose: Find biggest sum of contiguous subarray within 1D array of numbers
+  link: http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
+  example: |
+    The biggest sum of continuous subarrays in [-2, -3, 4, -1, -2, 1, 5, -3] is 7.
+  pseudocode: |
+      Initialize:
+        max_so_far = 0
+        max_ending_here = 0
+
+      Loop for each element of the array
+        (a) max_ending_here = max_ending_here + a[i]
+        (b) if(max_ending_here < 0)
+                  max_ending_here = 0
+        (c) if(max_so_far < max_ending_here)
+                  max_so_far = max_ending_here
+      return max_so_far
+  type: Dynamic Programming
+  complexity: O(n)
+  difficulty: Medium
+
+- name: Find the Missing Number
+  link: http://www.geeksforgeeks.org/find-the-missing-number/
+  example: |
+    The missing number from [1 2 3 4 5 6 7 8 10] is 9
+  pseudocode: |
+    Sum Formula
+      1. Get the sum of numbers: total = n*(n+1)/2
+      2. Subtract all the numbers from sum and you will get the missing number.
+    XOR
+      1) XOR all the array elements, let the result of XOR be X1.
+      2) XOR all numbers from 1 to n, let XOR be X2.
+      3) XOR of X1 and X2 gives the missing number.
+  type: Math
+  complexity: O(n)
+  difficulty: Easy
+
+- name: Find starting & ending indices of subarray with given sum
+  link: http://www.geeksforgeeks.org/find-subarray-with-given-sum/
+  example: |
+    Given [1, 4, 20, 3, 10, 5] and sum = 33, sum is found bet indexes 2 and 4.
+  pseudocode: |
+    curr_sum = arr[0]
+    start = 0
+    for (i = 1; i <= n; i++)
+      while (curr_sum > sum && start < i - 1)
+        curr_sum -= arr[start] # if bigger than sum, subtract the beginning #s
+        start++
+      if (curr_sum == n)
+        return [start, i - 1] # i-1 bc last elem
+      if (i < n)
+        curr_sum += arr[i]
+  type: Dynamic Programming
+  complexity: O(n); outer loop = n, subtact is at most another n
+  difficulty: Medium

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<div class = "container-fluid summary">
+  <div class="summary-content">
+    <h2>Study</h2>
+    <br>
+    {{content}}
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class= "summary-content">
+    <div id="accordion">
+    {% for topic in site.data.study %}
+    <div>
+      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#content{{ forloop.index }}" aria-controls="content{{ forloop.index }}">
+      {{ topic.name }}</a>
+      {% if topic.purpose %}
+      : {{ topic.purpose }}
+      {% endif %}
+      <div id="content{{ forloop.index }}" class="collapse">
+  * <b>Example:</b> {{topic.example}}<br>
+  * <a href="{{topic.link}}">Pseudocode:</a>
+  {% highlight ruby %}
+  {{ topic.pseudocode }}{% endhighlight %}
+  * <b>Complexity:</b> {{topic.complexity}} | <b>Type:</b> {{topic.type}} | <b>Difficulty:</b> {{topic.difficulty}}</div>
+    </div><br>
+    {% endfor %}
+    </div>
+    </div>
+</div>
