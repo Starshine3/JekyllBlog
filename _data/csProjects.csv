@@ -1,20 +1,21 @@
-Name,Language/library,Img,ImgSize,Demo,Purpose,Hook,Description,Comments,Show
-Hog,Python,,,,Academic,,,,false
-Ants vs Bees,Python,,,,Academic,,,,false
-Maps,Python,,,,Academic,,,,false
-Scheme Interpreter,Python,,,,Academic,,,,false
-Cube Puzzle,Java,../img/projects/cubePuzzle.png,small,,Academic,Think you can color all sides of the cube?,Try to color all faces of the cube by rolling it around a 4x4 puzzle. The cube face that touches the puzzle swaps color with the puzzle tile.,,false
-The Enigma,Java,../img/projects/enigma.svg,small,,Academic,A simulation of the Enigma machine used by the Germans in WWII.,"A program which simulates the Enigma machine used by the Germans in WWII. It creates a machine from a given configuration file, then encrypts a given input message.",,true
-Tetris,Java,../img/projects/tetris.png,small,,Personal Entertainment,My implementation of my favorite game.,"My implementation of Tetris, a tile-clearing puzzle game",,true
-Ataxx,Java,../img/projects/ataxx.png,small,,Academic,A 2-player checker-like game that can be played with human players or with an AI.,A 2-player checker-like game that can be played with human players or with an AI.,,true
-Pacman,Python,,,,Academic,,,,false
-Personal Web,"HTML/CSS, JS",,,starshine3.github.io,Personal Entertainment,,,,false
-Graph API,Java,../img/projects/graph.svg,small,,Academic,I implemented different graph traversal algorithms and built 2 clients (Trip Planner and Make) that use this API.,I also implemented 2 clients that uses this graph API: 1) A trip planner that takes in a list of locations and return instructions on how to efficiently travel to the locations. 2) A Make program that follow given rules to build targets,,true
-GoGo Places,"HTML/CSS, JS, Google Maps API, Amadeus API",../img/projects/gogoPlaces.png,medium,,CalHacks 3.0,A web app that generates a list of possible scavenger hunt locations.,A web app that generates a list of possible scavenger hunt locations when given a particular city as input,Worked on backend (Javascript),true
-Air Pollution Globe,"HTML/CSS, JS (Three.js, WebGL)",../img/projects/airPollutionGlobe.png,small,air-pollution-globe.herokuapp.com/,Personal Entertainment,Visualize the air pollution level across the world.,A globe that visualizes the concentration of air pollutants in urban areas across the world. Data obtained from WHO’s May 2016 database.,,true
-SPOT,"HTML/CSS, JS, Clarifai API",../img/projects/spot.png,medium,,Academic,A web app that classifies the contents of a given pre-recorded or live-streaming video,A web app that classifies the contents of a given pre-recorded or live-streaming video.,Worked on front-end user interface (HTML/CSS),true
-Kindred Spirits,"HTML/CSS, JS (D3.js), AFrame",../img/projects/kindredSpirits.png,medium,,AT&T VR/AR Hackathon May 2017,A VR web app that enables meditators to visualize the intensity of their concentration,A VR web app that enables meditators to visualize the intensity of their concentration,Worked on front-end user interface and interaction (Javascript),true
-ECUC Professional Learning Community,"Wordpress, JS",../img/projects/plc.png,large,casicommunity.info,Work,,"A website that encourages collaboration, communication, and connection among ECUC staff and program leaders",,true
-MIPS Assembler,C,,,,Academic,,,,false
-,,,,,,,,,
-,,,,,,,,,
+Name,Language/library,Img,ImgSize,Demo,Purpose,Type,Hook,Description,Comments,Show
+Hog,Python,,,,Academic,Software,,,,false
+Ants vs Bees,Python,,,,Academic,Software,,,,false
+Maps,Python,,,,Academic,Software,,,,false
+Scheme Interpreter,Python,,,,Academic,Software,,,,false
+Cube Puzzle,Java,../img/projects/cubePuzzle.png,small,,Academic,Software,Think you can color all sides of the cube?,Try to color all faces of the cube by rolling it around a 4x4 puzzle. The cube face that touches the puzzle swaps color with the puzzle tile.,,false
+The Enigma,Java,../img/projects/enigma.svg,small,,Academic,Software,A simulation of the Enigma machine used by the Germans in WWII.,"A program which simulates the Enigma machine used by the Germans in WWII. It creates a machine from a given configuration file, then encrypts a given input message.",,true
+Tetris,Java,../img/projects/tetris.png,small,,PersonalEntertainment,Software,My implementation of my favorite game.,"My implementation of Tetris, a tile-clearing puzzle game",,true
+Ataxx,Java,../img/projects/ataxx.png,small,,Academic,Software,A 2-player checker-like game that can be played with human players or with an AI.,A 2-player checker-like game that can be played with human players or with an AI.,,true
+Pacman,Python,,,,Academic,Software,,,,false
+Personal Web,"HTML/CSS, JS",,,starshine3.github.io,PersonalEntertainment,WebApp,,,,false
+Graph API,Java,../img/projects/graph.svg,small,,Academic,Software,I implemented different graph traversal algorithms and built 2 clients (Trip Planner and Make) that use this API.,I also implemented 2 clients that uses this graph API: 1) A trip planner that takes in a list of locations and return instructions on how to efficiently travel to the locations. 2) A Make program that follow given rules to build targets,,true
+GoGo Places,"HTML/CSS, JS, Google Maps API, Amadeus API",../img/projects/gogoPlaces.png,medium,,Hackathon,WebApp,A web app that generates a list of possible scavenger hunt locations.,A web app that generates a list of possible scavenger hunt locations when given a particular city as input,Worked on backend (Javascript),true
+Air Pollution Globe,"HTML/CSS, JS (Three.js, WebGL)",../img/projects/airPollutionGlobe.png,small,air-pollution-globe.herokuapp.com/,PersonalEntertainment,WebApp,Visualize the air pollution level across the world.,A globe that visualizes the concentration of air pollutants in urban areas across the world. Data obtained from WHO’s May 2016 database.,,true
+SPOT,"HTML/CSS, JS, Clarifai API",../img/projects/spot.png,medium,,Academic,WebApp,A web app that classifies the contents of a given pre-recorded or live-streaming video,A web app that classifies the contents of a given pre-recorded or live-streaming video.,Worked on front-end user interface (HTML/CSS),true
+Kindred Spirits,"HTML/CSS, JS (D3.js), AFrame",../img/projects/kindredSpirits.png,medium,somber-record.glitch.me,Hackathon,WebApp,A VR web app that enables meditators to visualize the intensity of their concentration,A VR web app that enables meditators to visualize the intensity of their concentration,Worked on front-end user interface and interaction (Javascript),true
+ECUC Professional Learning Community,"Wordpress, JS",../img/projects/plc.png,large,casicommunity.info,Work,WebApp,,"A website that encourages collaboration, communication, and connection among ECUC staff and program leaders",,true
+MIPS Assembler,C,,,,Academic,Software,,,,false
+Locate the Image,"HTML/CSS, Node.js, Angular 2, Dropzone.js, Google Cloud Vision API",../img/projects/locateImg.jpg,small,,Hackathon,WebApp,A web app that automatically determines the locations of where pictures were taken,,,true
+“Encrypted Dropbox”,goLang,../img/projects/encryptedDropbox.png,small,,Academic,Software,"A secure file storing/sharing system",,,true
+,,,,,,,,,,

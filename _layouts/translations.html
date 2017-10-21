@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <div class = "container-fluid summary">
   <div class="summary-content">
     <h2>Disclaimer</h2>
@@ -8,19 +9,53 @@ layout: default
     {{content}}
   </div>
 </div>
+<div class="container-fluid text-center">
+  <div class="btn-group filter-btn-group" role="group" aria-label="...">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort By <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="isoSort('artist');return false;">Artist</a></li>
+          <li><a href="#" onclick="isoSort('date');return false;">Date</a></li>
+          <li><a href="#" onclick="isoSort('title');return false;">Title</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Genre <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="isoFilter('*');return false;">All</a></li>
+          <li><a href="#" onclick="isoFilter('.anime');return false;">Anime</a></li>
+          <li><a href="#" onclick="isoFilter('.rock');return false;">Rock</a></li>
+          <li><a href="#" onclick="isoFilter('.utattemita');return false;">Uttatemita</a></li>
+          <li><a href="#" onclick="isoFilter('.Vocaloid');return false;">Vocaloid</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Artist <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="isoFilter('*');return false;">All</a></li>
+          <li><a href="#" onclick="isoFilter(isoSpecifiedFilter('.post-artist', 'Alexandros'));return false;">Alexandros</a></li>
+          <li><a href="#" onclick="isoFilter(isoSpecifiedFilter('.post-artist', 'rib'));return false;">rib</a></li>
+          <li><a href="#" onclick="isoFilter(isoSpecifiedFilter('.post-artist', 'The Oral Cigarettes'));return false;">The Oral Cigarettes</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
 
-<div class="container-fluid"><div id="translationChart">
+<div class="container-fluid"><div class="translationChart">
   {% for post in site.posts %}
     {% if post.type == 'translations' %}
-        <div class="tchart-item col-xs-4 col-md-2">
-          <h6>{{ post.date | date: '%b %d, %Y' }}</h6>
+        <div class="tchart-item col-xs-4 col-md-2 {{post.genre}}">
+          <h6 class="post-date">{{ post.date | date: '%b %d, %Y' }}</h6>
           <a href="{{post.url | prepend: site.baseurl}}">
+            <h4 class="post-title">
             {% if post.titles.rTitle %}
-                <h4>{{post.titles.rTitle}}</h4>
+                {{post.titles.rTitle}}
             {% else %}
-                <h4>{{post.titles.eTitle}}</h4>
+                {{post.titles.eTitle}}
             {% endif %}
-            <h5>{{ post.artist }}</h5>
+            </h4>
+            <h5 class="post-artist">{{ post.artist }}</h5>
           </a>
         </div>
     {% endif %}

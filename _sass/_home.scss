@@ -73,12 +73,7 @@ img {
     opacity: 0;
     text-transform: uppercase;
 }
-@media(max-width:767px) {
-    .vNav {
-        display: none;
-    }
-    /*back to top shown*/
-}
+
 
 /* All section style. */
 section {
@@ -86,32 +81,6 @@ section {
     min-height: 100%;
     position: relative;
 }
-/*Phones*/
-@media (max-width: 767px) {
-  .description {
-      width:40%;
-    }
-  #programmer{
-
-  }
-  #berkeley {
-  }
-  #platform {
-    margin-left: -10%;
-    margin-top: 5%;
-    width: 90%;
-  }
-  #mountains {
-    width: 55%;
-    margin-top: 7%;
-    margin-left: -13%;
-  }
-  #name {
-    width: 65%;
-    margin-left: -25%;
-    z-index: 5;
-  }
-  }
 
 /* Intro section styles. */
 #intro {

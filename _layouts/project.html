@@ -1,29 +1,53 @@
 ---
 layout: default
 ---
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-
-<script src="../js/chart.js"></script>
-
 <div class="container-fluid summary">
   <div class="summary-content">
     <h2>Projects</h2>
     <br>
     {{content}}
+    <br>
+  <div class="btn-group filter-btn-group" role="group" aria-label="...">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project Type <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="isoFilter('*');return false;">All</a></li>
+          <li><a href="#" onclick="isoFilter('.Software');return false;">Software</a></li>
+          <li><a href="#" onclick="isoFilter('.WebApp');return false;">Web App</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project Purpose <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="isoFilter('*');return false;">All</a></li>
+          <li><a href="#" onclick="isoFilter('.Academic');return false;">Academics</a></li>
+          <li><a href="#" onclick="isoFilter('.Hackathon');return false;">Hackathon</a></li>
+          <li><a href="#" onclick="isoFilter('.PersonalEntertainment');return false;">Personal Entertainment</a></li>
+          <li><a href="#" onclick="isoFilter('.Work');return false;">Work</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
 
-<div class="container-fluid main"><div class="chart">
+<div class="container-fluid"><div class="chart">
   {% for proj in site.data.csProjects %}
     {% if proj.Show == 'true' %}
-        <div class="chart-item {{proj.ImgSize}}">
-          <img src="{{proj.Img}}">
-          <div class="chart-item-overlay">
-            <div class="chart-item-text">
-                <div class="chart-item-title">{{proj.Name}}</div>
-                <div class="chart-item-hook">{{proj.Hook}}</div>
+        <div class="chart-item {{proj.ImgSize}} {{proj.Purpose}} {{proj.Type}}">
+          {% if proj.Demo%}
+          <a href="https://{{proj.Demo}}">
+          {% endif %}
+            <img src="{{proj.Img}}">
+            <div class="chart-item-overlay">
+              <div class="chart-item-text" ahref="{{proj.demo}}">
+                  <div class="chart-item-title">{{proj.Name}}</div>
+                  <div class="chart-item-hook">{{proj.Hook}}</div>
+              </div>
             </div>
-          </div>
+          {% if proj.Demo%}
+          </a>
+          {% endif %}
         </div>
     {% endif %}
  {% endfor %}

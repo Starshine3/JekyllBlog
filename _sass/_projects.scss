@@ -1,6 +1,6 @@
 .chart {
-    width: 70%;
-    padding: 2%;
+  padding: 2%;
+  position: absolute;
 }
 
 /* clear fix */
@@ -10,11 +10,20 @@
   clear: both;
 }
 .chart-item {
-  display: block;
+  /*display: block;*/
   border-style: solid;
   border-width: medium;
 }
 .chart-item.small {
+  width: 23%;
+}
+.chart-item.medium {
+  width: 48%;
+}
+.chart-item.large {
+  width: 70%;
+}
+/*.chart-item.small {
   width: 300px;
 }
 .chart-item.medium {
@@ -22,7 +31,7 @@
 }
 .chart-item.large {
   width: 800px;
-}
+}*/
 .chart-item img {
   width: 100%;
 }
