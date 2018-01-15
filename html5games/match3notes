@@ -1,0 +1,40 @@
+main menu
+1. create new game
+- score
+
+var game = {
+    columns: 8,
+    rows: 8,
+    board = []
+};
+
+game loop
+    init board loop
+        clear matches
+        check if possible matches
+            if yes wait for user input
+            if no generate another board
+
+function createBoard() {
+    while True {
+        board = generateBoard();
+        clearMatches(board);
+        possible = findPossibleMatches(board);
+        if (possible.length > 0) {
+            break;
+        }
+    }
+}
+function generateBoard() {}
+function clearMatches(board) {
+    matches = findExistingMatches(board);
+    while (matches.length > 0) {
+        match = matches.pop();
+        clearMatch(match);
+        //update matches w new findExistingMatches
+    }
+}
+function findExistingMatches(board) {}
+function clearMatch(board) {
+
+}
