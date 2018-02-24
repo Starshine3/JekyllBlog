@@ -118,8 +118,8 @@ function capFirstLetter(line) {
 }
 
 var check, pre, suff;
-var b4Change = ['o', 'ha', 'e', 'ichi nin'];
-var afterChange = ['wo', 'wa', 'he', 'hitori'];
+var b4Change = ['o', 'ha', 'e', 'ichi nin', 'ō', 'ī', 'ā', 'ū'];
+var afterChange = ['wo', 'wa', 'he', 'hitori', 'ou', 'ii', 'aa', 'uu'];
 var need2Merge = ['tte', 'ta', 'da', 'i', 'te',
   'de', 'nai', 'zu', 'n', 'u', 'tara', 'ba'];
 // ha -> wa
