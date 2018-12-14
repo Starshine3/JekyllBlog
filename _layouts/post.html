@@ -12,12 +12,15 @@ layout: default
     {% if page.titles.jTitle and page.titles.rTitle %}
       <h4>{{ page.titles.jTitle }} | {{ page.titles.rTitle }}</h4>
     {% endif %}
+    {% if page.artist %}
+      <h5>{{ page.artist }}</h5>
+    {% endif %}
     {% if page.vocal and page.songWriter %}
       <h5>Vocal: {{ page.vocal }} | Songwriter: {{ page.songWriter }}</h5>
-    {% else if page.songWriter %}
-      <h5>Songwriter: {{ page.songWriter }}</h5>
     {% else if page.vocal %}
       <h5>Vocal: {{ page.vocal }}</h5>
+    {% else if page.songWriter %}
+      <h5>Songwriter: {{ page.songWriter }}</h5>
     {% endif %}
 
     {% if page.misc %}
