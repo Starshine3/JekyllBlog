@@ -6,8 +6,8 @@ $(document).ready(function () {
         var cols = "";
 
         cols += '<td class="col-sm-3"><input type="text" class="form-control inputName" placeholder="Anon ' + counter + '"/></td>';
-        cols += '<td class="col-sm-3"><input type="text" class="form-control inputPrice" placeholder="0"/></td>';
-        cols += '<td class="col-sm-3"><input type="text" class="form-control inputPay" placeholder="0"/></td>';
+        cols += '<td class="col-sm-3"><input type="text" class="form-control inputNum inputPrice" placeholder="0"/></td>';
+        cols += '<td class="col-sm-3"><input type="text" class="form-control inputNum inputPay" placeholder="0"/></td>';
         cols += '<td class="col-sm-1"><input type="button" class="delete-button btn btn-md btn-danger"  value="Delete"></td>';
 
         newRow.append(cols);
@@ -48,7 +48,7 @@ $(document).ready(function () {
     })
 
     function invalidInput() {
-        var inputs = $(":text");
+        var inputs = $(".inputNum:text");
         for (var i = 0; i < inputs.length; i++) {
             if (inputs.get(i).value != "" 
                 && !$.isNumeric(inputs.get(i).value)) {

@@ -12,8 +12,8 @@ layout: default
             <thead>
                 <tr>
                     <td>Name</td>
-                    <td>Price</td>
-                    <td>Pay</td>
+                    <td>Item Price</td>
+                    <td>Amount Paid</td>
                     <td>
                         <input type="button" class="btn btn-success" id="addrow" value="Add Row" />
                     </td>
@@ -25,10 +25,10 @@ layout: default
                         <input type="text" class="form-control inputName" placeholder="Anon 1"/>
                     </td>
                     <td class="col-sm-3">
-                        <input type="text" class="form-control inputPrice" placeholder="0"/>
+                        <input type="text" class="form-control inputNum inputPrice" placeholder="0"/>
                     </td>
                     <td class="col-sm-3">
-                        <input type="text" class="form-control inputPay" placeholder="0"/>
+                        <input type="text" class="form-control inputNum inputPay" placeholder="0"/>
                     </td>
                     <td class="col-sm-1"><input type="button" class="delete-button btn btn-md btn-danger "  value="Delete"></td>
                 </tr>
@@ -37,10 +37,10 @@ layout: default
                         <input type="text" class="form-control inputName"placeholder="Anon 2"/>
                     </td>
                     <td class="col-sm-3">
-                        <input type="text" class="form-control inputPrice"  placeholder="0"/>
+                        <input type="text" class="form-control inputNum inputPrice"  placeholder="0"/>
                     </td>
                     <td class="col-sm-3">
-                        <input type="text" class="form-control inputPay" placeholder="0"/>
+                        <input type="text" class="form-control inputNum inputPay" placeholder="0"/>
                     </td>
                     <td class="col-sm-1"><input type="button" class="delete-button btn btn-md btn-danger "  value="Delete"></td>
                 </tr>
@@ -49,13 +49,13 @@ layout: default
         <div class="form-group row">
             <label for="inputTax" class="col-sm-2 col-form-label">Tax</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputTax" placeholder="0">
+                <input type="text" class="form-control inputNum" id="inputTax" placeholder="0">
             </div>
         </div>
         <div class="form-group row">
             <label for="inputTotal" class="col-sm-2 col-form-label">Total</label>
             <div class="col-sm-8">
-                <input type="text" class="form-control" id="inputTotal" placeholder="0">
+                <input type="text" class="form-control inputNum" id="inputTotal" placeholder="0">
             </div>
         </div>
         <div class="form-group row text-center">
