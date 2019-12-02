@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<script src="{{site.baseurl}}/js/billsplitter.js"></script>
+<div class="container-fluid content">
+    <h2>Bill Splitter</h2>
+    <h4>A simple online bill splitting app</h4>
+    <br>
+
+    <form id="billForm">
+        <table id="billTable" class="table order-table">
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Pay</td>
+                    <td>
+                        <input type="button" class="btn btn-success" id="addrow" value="Add Row" />
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-sm-3">
+                        <input type="text" class="form-control inputName" placeholder="Anon 1"/>
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="text" class="form-control inputPrice" placeholder="0"/>
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="text" class="form-control inputPay" placeholder="0"/>
+                    </td>
+                    <td class="col-sm-1"><input type="button" class="delete-button btn btn-md btn-danger "  value="Delete"></td>
+                </tr>
+                <tr>
+                    <td class="col-sm-3">
+                        <input type="text" class="form-control inputName"placeholder="Anon 2"/>
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="text" class="form-control inputPrice"  placeholder="0"/>
+                    </td>
+                    <td class="col-sm-3">
+                        <input type="text" class="form-control inputPay" placeholder="0"/>
+                    </td>
+                    <td class="col-sm-1"><input type="button" class="delete-button btn btn-md btn-danger "  value="Delete"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-group row">
+            <label for="inputTax" class="col-sm-2 col-form-label">Tax</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputTax" placeholder="0">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputTotal" class="col-sm-2 col-form-label">Total</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputTotal" placeholder="0">
+            </div>
+        </div>
+        <div class="form-group row text-center">
+            <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+    </form>
+    <table id="chargeTable" class="table charge-table table-bordered table-sm">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Amount Own</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
