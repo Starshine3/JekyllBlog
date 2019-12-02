@@ -37,7 +37,7 @@
 }
 .chart-item:hover .chart-item-overlay{
     height: 100%;
-/*    cursor: pointer;*/
+    cursor: pointer;
 }
 .chart-item-overlay {
     height: 0;
@@ -67,4 +67,7 @@
 .chart-item-hook {
     font-size: 19px;
     margin-top: 5%;
+}
+.hidden {
+  display: none;
 }

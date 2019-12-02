@@ -26,6 +26,7 @@ $(document).ready(function () {
             return false;
         }
         var finalCharge = calculate();
+        $("#chargeTable tbody tr").remove(); 
 
         for (var i = 0; i < finalCharge.length; i++) {
             var newRow = $("<tr>");
@@ -64,8 +65,12 @@ $(document).ready(function () {
         var indTax = Array(numRows).fill(0);
         var totalPrice = 0;
         var totalPay = 0;
-        var totalTax = parseInt($('#inputTax').val());
+        var totalTax = 0;
         var totalCharge = parseInt($('#inputTotal').val());
+
+        if ($('#inputTax').val() != "") {
+            totalTax = parseInt($('#inputTax').val());
+        }
 
         for (var i = 0; i < numRows; i++) {
             if ($(".inputPrice").get(i).value != "") {
