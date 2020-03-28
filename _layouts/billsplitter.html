@@ -2,7 +2,7 @@
 layout: default
 ---
 <script src="{{site.baseurl}}/js/billsplitter.js"></script>
-<div class="container-fluid content">
+<div class="container content">
     <h2>Bill Splitter</h2>
     <h4>A simple online bill splitting app</h4>
     <br>
@@ -53,7 +53,13 @@ layout: default
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputTotal" class="col-sm-2 col-form-label">Total</label>
+            <label for="inputTax" class="col-sm-2 col-form-label">Tip</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control inputNum" id="inputTip" placeholder="0">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputTotal" class="col-sm-2 col-form-label">Total with Tax (no Tip)</label>
             <div class="col-sm-8">
                 <input type="text" class="form-control inputNum" id="inputTotal" placeholder="0">
             </div>
