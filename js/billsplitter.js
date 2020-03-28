@@ -63,22 +63,27 @@ $(document).ready(function () {
         var indPrice = Array(numRows).fill(0);
         var indPay = Array(numRows).fill(0);
         var indTax = Array(numRows).fill(0);
+        var indTip = Array(numRows).fill(0);
         var totalPrice = 0;
         var totalPay = 0;
         var totalTax = 0;
-        var totalCharge = parseInt($('#inputTotal').val());
+        var totalTip = 0;
+        var totalCharge = parseFloat($('#inputTotal').val());
 
         if ($('#inputTax').val() != "") {
-            totalTax = parseInt($('#inputTax').val());
+            totalTax = parseFloat($('#inputTax').val());
+        }
+        if ($('#inputTip').val() != "") {
+            totalTip = parseFloat($('#inputTip').val());
         }
 
         for (var i = 0; i < numRows; i++) {
             if ($(".inputPrice").get(i).value != "") {
-                indPrice[i] = parseInt($(".inputPrice").get(i).value);
+                indPrice[i] = parseFloat($(".inputPrice").get(i).value);
                 totalPrice += indPrice[i];
             }
             if ($(".inputPay").get(i).value != "") {
-                indPay[i] = parseInt($(".inputPay").get(i).value);
+                indPay[i] = parseFloat($(".inputPay").get(i).value);
                 totalPay += indPay[i];
             } 
         } 
@@ -86,8 +91,9 @@ $(document).ready(function () {
         for (var i = 0; i < numRows; i++) {
             var indPortion = indPrice[i]/totalPrice;
             indTax[i] = indPortion * totalTax;
+            indTip[i] = indPortion * totalTip;
 
-            var indCharge = indPrice[i] + indTax[i];
+            var indCharge = indPrice[i] + indTax[i] + indTip[i];
             indPay[i] -= indCharge;
             if (indPay[i] > 0) {
                 indPay[i] = 0;
